@@ -10,6 +10,10 @@ Explorar o funcionamento interno de sistemas de arquivos — desde conceitos bá
 
 ---
 
+Meu GPT é isso:
+
+![Livro](/.resources/1.png)
+
 ## Como começar
 
 ```bash
