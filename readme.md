@@ -10,48 +10,18 @@ Explorar o funcionamento interno de sistemas de arquivos — desde conceitos bá
 
 ---
 
+## Como começar
+
+Cada dia de prática, vai estar dentro de exercícios numerados.
+
+| Exercício | Tópico | Link |
+|-----------|--------|------|
+| 1 | Fundamentos de Sistemas de Arquivos | [exercicios/1/readme.md](./exercicios/1/readme.md)             |
+| 2 | Blocos, Inodes e Operações de Escrita e Leitura | [exercicios/2/readme.md](./exercicios/2/readme.md) |
+
+
+## 📖
+
 Meu GPT é isso:
 
 ![Livro](/.resources/1.png)
-
-## Como começar
-
-```bash
-make
-```
-
-
-### Exemplos
-```
-*********************** 
-0 - Read blocks 
-1 - Write Data 
-2 - Exit 
-*********************** 
-1
-Write: 
-iojaiojdaiojsdijasiodjasiojdioasjiodjaiojdjiaijdaijdiojasiojdasjiodjioaiodjaiojiojaiojdaiojsdijasiodjasiojdioasjiodjaiojdjiaijdaijdiojasiojdasjiodjioaiodjaiojiojaiojdaiojsdijasiodjasiojdioasjiodjaiojdjiaijdaijdiojasiojdasjiodjioaiodjaiojiojaiojdaiojsdijasiodjasiojdioasjiodjaiojdjiaijdaijdiojasiojdasjiodjioaiodjaiojiojaiojdaiojsdijasiodjasiojdioasjiodjaiojdjiaijdaijdiojasiojdasjiodjioaiodjaiojiojaiojdaiojsdijasiodjasiojdioasjiodjaiojdjiaijdaijdiojasiojdasjiodjioaiodjaioj
-iojaiojdaiojsdijasiodjasiojdioasjiodjaiojdjiaijdaijdiojasiojdasjiodjioaiodjaioji*********************** 
-
-*********************** 
-0 - Read blocks 
-1 - Write Data 
-2 - Exit 
-*********************** 
-0
-Reading blocks...
-block 0: ojsdijas
-block 1: iodjasio
-block 2: jdioasji
-block 3: odjaiojd
-block 4: jiaijdai
-block 5: jdiojasi
-block 6: ojdasjio
-block 7: djioaiod
-block 8: jaiojoji
-block 9: ojaiojda
-```
-
-## Recursos teóricos
-
-- [Operating Systems: Three Easy Pieces (OSTEP)](/.resources/fs-intro.pdf) - Capítulos sobre sistemas de arquivos
