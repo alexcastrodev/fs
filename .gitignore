@@ -1,5 +1,6 @@
 # Builds
 **/build
+**/*.o
 # VSCode debugger
 **/*.dSYM
 **/src/main
