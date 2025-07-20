@@ -1,4 +1,4 @@
-# 
+# Leitura de Arquivos
 
 Agora que temos read_blocks e write_file, bitmap de inodes e blocos.
 

@@ -1,13 +1,20 @@
 CC = gcc
 CFLAGS = -Wall -I./src
+SRC = main.c src/disk.c
 OBJ = main.o src/disk.o
 TARGET = build/fs
 
-all: $(TARGET)
+all: release
+
+release: CFLAGS += -O2 -s
+release: clean $(TARGET)
+
+debug: CFLAGS += -g -O0
+debug: clean $(TARGET)
 
 $(TARGET): $(OBJ)
 	@mkdir -p build
-	$(CC) $(OBJ) -o $(TARGET)
+	$(CC) $(CFLAGS) $(OBJ) -o $(TARGET)
 
 main.o: main.c src/disk.h
 	$(CC) $(CFLAGS) -c main.c
