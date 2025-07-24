@@ -8,7 +8,7 @@ Desenvolver um sistema de arquivos simples para compreender os conceitos fundame
 
 - Compreensão de estruturas de dados para sistemas de arquivos
 - Implementação de algoritmos de alocação e gerenciamento de blocos
-- Programação em linguagem C/C++
+- Programação em linguagem C
 - Documentação técnica e apresentação de resultados
 
 ## Especificações do Projeto
