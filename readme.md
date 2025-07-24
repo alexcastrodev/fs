@@ -1,65 +1,72 @@
-# File System
+# Sistema de Arquivos Personalizado - Projeto Acadêmico
 
-Este repositório contém implementações práticas e anotações teóricas desenvolvidas durante meus estudos de mestrado na área de **sistemas operacionais**, com foco específico em **sistemas de arquivos**.
+## Objetivo
 
----
+Desenvolver um sistema de arquivos simples para compreender os conceitos fundamentais de gerenciamento de armazenamento, organização de dados e estruturas de metadados utilizadas em sistemas operacionais modernos.
 
-## 📚 Objetivo
+## Competências Desenvolvidas
 
-Explorar o funcionamento interno de sistemas de arquivos — desde conceitos básicos como blocos e metadados até estruturas mais complexas como inodes, diretórios, journaling e gerenciamento de espaço.
+- Compreensão de estruturas de dados para sistemas de arquivos
+- Implementação de algoritmos de alocação e gerenciamento de blocos
+- Programação em linguagem C/C++
+- Documentação técnica e apresentação de resultados
 
----
+## Especificações do Projeto
 
-## Como começar
+### Componentes Obrigatórios
+- **Superbloco**: Contém metadados sobre o sistema de arquivos
+- **Inodes**: Estruturas que armazenam informações sobre arquivos e diretórios
+- **Blocos de dados**: Onde o conteúdo real dos arquivos é armazenado
+- **Bitmap de blocos**: Rastreia quais blocos estão livres ou ocupados
 
-Cada dia de prática, vai estar dentro de exercícios numerados.
+### Funcionalidades Mínimas
+1. **Formatação do sistema** (`format`)
+2. **Criação de arquivos** (`create`)
+3. **Remoção de arquivos** (`delete`)
+4. **Leitura de arquivos** (`read`)
+5. **Escrita de arquivos** (`write`)
+6. **Listagem de diretório** (`ls`)
 
-| Exercício | Tópico | Link |
-|-----------|--------|------|
-| 1 | Fundamentos de Sistemas de Arquivos | [exercicios/1/readme.md](./exercicios/1/readme.md)             |
-| 2 | Blocos, Inodes e Operações de Escrita e Leitura | [exercicios/2/readme.md](./exercicios/2/readme.md) |
-| 3 | Leitura de arquivos  | [exercicios/3/readme.md](./exercicios/3/readme.md) |
+## Etapas de Desenvolvimento
 
+### Milestone 1: Estrutura Base (25%)
+- Definição das estruturas de dados
+- Implementação do superbloco e sistema de inodes
+- Criação do bitmap de controle de blocos
 
-# Debug
+### Milestone 2: Operações Básicas (35%)
+- Formatação do sistema de arquivos
+- Criação e remoção de arquivos
+- Sistema básico de diretórios
 
-Eu adicionei isso a partir do exercício 3
+### Milestone 3: I/O de Dados (25%)
+- Implementação de leitura e escrita
+- Gerenciamento de blocos de dados
+- Tratamento de fragmentação
 
-```
-make debug
-lldb build/fs
-breakpoint set --file src/disk.c --line 105
-(lldb) run
-Process 21436 launched: '/Users/alexandrocastro/study/fs/exercicios/3/build/fs' (arm64)
-Process 21436 stopped
-* thread #1, queue = 'com.apple.main-thread', stop reason = breakpoint 1.1
-    frame #0: 0x0000000100000a7c fs`read_file(inode_index=0) at disk.c:105:9
-   102  }
-   103 
-   104  void read_file(int inode_index) {
--> 105      if (inode_index < 0 || inode_index >= MAX_FILES || inode_bitmap[inode_index] == 0) {
-   106          printf("Erro: Inode %d inválido ou não alocado.\n", inode_index);
-   107          return;
-   108      }
-Target 0: (fs) stopped.
-(lldb) print inode_index
-(int) 0
-```
+### Milestone 4: Testes e Documentação (15%)
+- Bateria de testes automatizados
+- Documentação técnica completa
+- Análise de performance
 
-## Breakpoints
+## Entregáveis
 
-- `read_file`: Verifica se o arquivo existe, lê os blocos associados e retorna o conteúdo.
+1. **Código fonte** completo com comentários
+2. **Makefile** para compilação
+3. **README** com instruções de uso
+4. **Relatório técnico** (máximo 10 páginas)
+5. **Apresentação** (15 minutos + 5 para perguntas)
 
-OBS: Neste projeto to usando LLDB, ao invés de GDB, para depurar o código.
+## Recursos Recomendados
 
-### IDE
+- Linguagem: C/C++
+- Ambiente: Linux/Unix
+- Controle de versão: Git
+- Documentação: Markdown ou LaTeX
 
-Eu tenho usado o CLion pra testar também.
+## Considerações Importantes
 
-![Debug](/.resources/2.png)
-
-## 📖
-
-Meu GPT é isso:
-
-![Livro](/.resources/1.png)
+- Sempre mantenha consistência entre metadados e dados
+- Implemente verificações de integridade
+- Considere casos extremos e tratamento de erros
+- Documente bem as estruturas de dados utilizadas
