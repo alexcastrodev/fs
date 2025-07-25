@@ -33,7 +33,12 @@ Iremos usar blocos para metadados - já que queremos saber do tamanho, quem pert
 
 Para guardar o array de dados, usaremos uma estrutura chamada inode, e para guardar quais inodes pertencem a um bloco
 
-## Estrutura para varredura
+## Estrutura de mapeamento
 
-Usaremos 2 bitmaps, um para inode - onde teremos se tem nó de dados livre ou não - e outro para a tabela de inodes - onde dirá se o bloco está livre ou ocupado -.
+Começaremos com 4kb para a informação do superbloco.
 
+Usaremos 2 bitmaps de 4kb, um para inode - onde teremos se tem nó de dados livre ou não - e outro para a tabela de inodes - onde dirá se o bloco está livre ou ocupado -.
+
+## Desenho
+
+![VSFS](/.resources/3.png)
