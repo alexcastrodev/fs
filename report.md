@@ -18,27 +18,17 @@ Segundo Remzi, para sistemas de arquivos, seu modelo mental deve eventualmente i
 
 Ao trabalhar e aprimorar seu modelo mental, você desenvolve uma compreensão abstrata do que está acontecendo, em vez de apenas tentar entender os detalhes específicos de algum código de sistema de arquivos.
 
+![VSFS](/.resources/3.png)
 
 # Modelo do Sistema de arquivos
 
-## Bloco de dados
+O modelo mental desse sistema de arquivos é simples. Uma série de blocos, e cada um são 4 KB.
 
-O bloco de dados terá 4kb cada. Cada bloco vai apontar endereços de 0 a N - 1 ( 0 a 7, 8 a 15, e por ai vai).
+1 bloco de 4kb suportam 16 nó (inode) (cada nó sendo 256 bytes), e cada nó com 15 ponteiros de 4 bytes cada (unsigned 32 bit little-endian integer )
 
-## Medados
+![Divisao](/.resources/4.png)
 
-Iremos usar blocos para metadados - já que queremos saber do tamanho, quem pertence, acesso, e outros tipo de dados - e outro para os dados.
+TODO: falar sobre quantos dados 1 inode pode referenciar.
 
-## Representação dos dados
+![capacidade](/.resources/5.png)
 
-Para guardar o array de dados, usaremos uma estrutura chamada inode, e para guardar quais inodes pertencem a um bloco
-
-## Estrutura de mapeamento
-
-Começaremos com 4kb para a informação do superbloco.
-
-Usaremos 2 bitmaps de 4kb, um para inode - onde teremos se tem nó de dados livre ou não - e outro para a tabela de inodes - onde dirá se o bloco está livre ou ocupado -.
-
-## Desenho
-
-![VSFS](/.resources/3.png)
