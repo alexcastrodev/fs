@@ -117,6 +117,7 @@ char* read_file(const int inode_id) {
 }
 
 int main() {
+    format();
     const int inode = write("Alekito File System");
     char* content = read_file(inode);
 
