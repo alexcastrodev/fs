@@ -1,5 +1,7 @@
 # Sistema de Arquivos Personalizado - Projeto Acadêmico
 
+[Relatório completo do sistema de arquivo](./report.md)
+
 ## Objetivo
 
 Desenvolver um sistema de arquivos simples para compreender os conceitos fundamentais de gerenciamento de armazenamento, organização de dados e estruturas de metadados utilizadas em sistemas operacionais modernos.
