@@ -24,7 +24,16 @@ Ao trabalhar e aprimorar seu modelo mental, você desenvolve uma compreensão ab
 
 O modelo mental desse sistema de arquivos é simples. Uma série de blocos, e cada um são 4 KB.
 
-1 bloco de 4kb suportam 16 nó (inode) (cada nó sendo 256 bytes), e cada nó com 15 ponteiros de 4 bytes cada (unsigned 32 bit little-endian integer )
+O sistema possui a seguinte organização:
+- 1 bloco (4KB) para Superblock
+- 1 bloco (4KB) para Inode Bitmap
+- 1 bloco (4KB) para Block Bitmap
+- 5 blocos (20KB) para Inode Table
+- Restante para Data Blocks
+
+1 bloco de 4KB suporta 16 inodes (cada inode sendo 256 bytes), portanto 5 blocos de inode table suportam 80 inodes total. Cada inode possui 15 ponteiros de 4 bytes cada (unsigned 32 bit little-endian integer).
+
+Com 5 blocos dedicados à inode table, temos um total de **20KB de inode table** que podem armazenar até 80 inodes simultâneos.
 
 ![Divisao](/.resources/4.png)
 

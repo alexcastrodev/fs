@@ -13,7 +13,7 @@
 //     Superblock // 4KB
 //     Inode Bitmap // 4KB
 //     Block Bitmap // 4KB
-//     Inode Table // 4KB
+//     Inode Table // 20KB
 //     Data Blocks // restante
 #define DISK_SIZE BLOCK_SIZE * BLOCK_COUNT
 
