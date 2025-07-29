@@ -51,7 +51,7 @@ int write(const char* content) {
     int allocated_blocks[MAX_BLOCKS_PER_FILE];
     int blocks_found = 0;
 
-    for (int i = 4; i < BLOCK_COUNT && blocks_found < block_needed; ++i) {
+    for (int i = 5; i < BLOCK_COUNT && blocks_found < block_needed; ++i) {
         if (s.block_bitmap[i] == 0) {
             allocated_blocks[blocks_found++] = i;
             s.block_bitmap[i] = 1;

@@ -17,7 +17,8 @@
 //     Data Blocks // restante
 #define DISK_SIZE BLOCK_SIZE * BLOCK_COUNT
 
-#define DISK_OFFSET 4 * BLOCK_SIZE
+// Começamos pelo quinto bloco (Data Blocks)
+#define DISK_OFFSET 5 * BLOCK_SIZE
 
 // TODO: como aplicar isso
 // 512b é o que os discos costumam gravar 
